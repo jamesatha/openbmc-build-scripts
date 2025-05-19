@@ -693,7 +693,7 @@ class Docker:
         #       --force-rm: Clean up Docker processes if they fail.
         container.build(
             proxy_args,
-            "--ulimit nofile=-1",
+            "--ulimit", "nofile=-1",
             "--network=host",
             "--force-rm",
             "--no-cache=true" if force_build else "--no-cache=false",
